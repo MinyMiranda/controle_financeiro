@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('cpf')->unique();
             $table->string('email')->unique();
-            $table->double('balance',10,2);
+            $table->double('balance',10,2)->default(0.00);
             $table->timestamps();
         });
     }
